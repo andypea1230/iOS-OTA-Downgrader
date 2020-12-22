@@ -572,7 +572,7 @@ function Downgrade {
             Echo "* You can also continue and futurerestore can attempt to download the baseband again"
             Input "Press ENTER to continue (or press Ctrl+C to cancel)"
             read -s
-            $futurerestore1 -t $SHSH --latest-baseband --use-pwndfu $IPSW.ipsw
+            $futurerestore1 -t $SHSH --use-pwndfu $IPSW.ipsw
         elif [[ $A7Device == 1 ]]; then
             $futurerestore2 -t $SHSH -s $SEP -m $BuildManifest -b $Baseband -p $BuildManifest $IPSW.ipsw
         else
